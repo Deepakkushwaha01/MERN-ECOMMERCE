@@ -4,11 +4,13 @@ import styled from 'styled-components'
 import { GetProduct } from '../../Axios/AxiosRegister';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Allproduct = () => {
 
   const id=useSelector(state=>state.user);
 const dispatch=useDispatch();
+const navigate=useNavigate();
 
 const {exsitingUser}=id.user;
 
@@ -54,7 +56,7 @@ console.log(Getpro)
   <h1>{val.name}</h1>
 </div>
 
-<div className=' w-full h-full'>
+<div onClick={()=>navigate(`update/${val._id}`)} className=' w-full h-full'>
 <IconButton >
   <EditIcon/>
     </IconButton>

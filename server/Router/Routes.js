@@ -18,6 +18,9 @@ import { EntryCart } from "../Controller/CartController/EntryCart.js";
 import { GetCartData } from "../Controller/CartController/GetCart.js";
 import { Deletecart } from "../Controller/CartController/DeleteCartData.js";
 import { updateItemQuat } from "../Controller/CartController/UpdateItemQuat.js";
+import { GetSingleProduct } from "../Controller/ProductController/Update/GetSingleProduct.js";
+import { UpdateProduct } from "../Controller/ProductController/Update/UpdateProduct.js";
+import { UpdateImages } from "../Controller/ProductController/Update/ImagesUpdateProduct.js";
 
 
 
@@ -43,6 +46,13 @@ router.post('/login',login);
 /* --------------------------------------------------------------------------------------------- */
 
 
+
+/* ------------------------------------------- Product Update ----------------------------------- */
+
+router.get('/updateSingleUpdate/:id',GetSingleProduct)
+router.post('/updateProduct',UpdateProduct)
+router.patch('/p/updateimage',upload.array('image'),UpdateImages)
+/* ---------------------------------------------------------------------------------------------- */
 
 
 

@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const AddDetails = ({form}) => {
   const {addData,newaddData}=form;
 
-
+console.log(addData)
 const [cat,newcat]=useState();
 
 

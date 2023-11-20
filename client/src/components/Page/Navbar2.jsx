@@ -120,10 +120,11 @@ const[invalue,newinvalue]=useState('');
        
 
      <li className={`flex ${search==false?" w-auto":'w-[14rem] border'}
-      w-auto pr-2 h-[2rem]  relative justify-end rounded-2xl duration-[1s] ease-in-out`}>  
+       pr-2 h-[2rem]  relative justify-end rounded-2xl  duration-[1s] ease-in-out`}>  
      
-     <input type="text" name="" id="" value={invalue} onChange={(e)=>newinvalue(e.target.value)} className={`focus:outline-none ${search==false?"invisible w-0":'visible w-[85%]'}
-      absolute left-[1%] duration-[0.1s] ease-in-out h-full top-0 px-2  `} />
+     <input type="text" name="" id="" value={invalue} onChange={(e)=>newinvalue(e.target.value)} 
+     className={`focus:outline-none ${search==false?"invisible w-0":'visible w-[85%]'}
+      absolute left-[1%] duration-[0.1s] ease-in-out h-full top-0 px-2  outline-none`} />
      
        <button onClick={()=>{newsearch(!search),newinvalue('')}} className="cursor-pointer   ">
       

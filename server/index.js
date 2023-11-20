@@ -12,7 +12,7 @@ const app=express();
 dotenv.config();        /* env file ka data hum use kar sake pure server m */
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only specific origins
+    origin:`${process.env.FRONT_URL}` , // Allow only specific origins
     methods: ['GET','POST','DELETE','PATCH'],
     credentials: true,
 }))

@@ -39,8 +39,8 @@ const route=()=>{
 
   return (
     <Div  className={`${val.search?'translate-y-[0.5rem] opacity-100 visible':" invisible opacity-0 translate-y-[-0.5rem] "}
-    bg-white w-[20rem]  z-40 h-auto absolute top-[100%] duration-[1s] ease-in-out left-[0%] md:right-0 md:left-auto
-    flex flex-col justify-center items-center gap-6 py-4 px-3 rounded-md`}>
+    bg-white w-[20rem]  z-40 h-[50vh] overflow-y-auto absolute top-[100%] duration-[1s] ease-in-out left-[0%] md:right-0 md:left-auto
+    flex flex-col justify-center items-center gap-6 py-[2rem] px-3 rounded-md`}>
       {
         data ? data.map((val,index)=>{
             return <div className='w-full'><NavLink to={`/single/${val._id}`}><div key={index} onClick={()=>route()} className='w-full h-[3rem] flex gap-1  border-b'>

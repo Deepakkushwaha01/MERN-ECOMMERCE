@@ -21,6 +21,7 @@ import Footer from "./components/Footer"
 import Cart from "./components/Page/Cart"
 import { CheckUser } from "./components/Axios/AxiosRegister"
 import { delete_User } from "./components/Redux/Slices/UserSlice"
+import UpdateProduct from "./components/Dashboard/Product/UpdateProduct/UpdateProduct"
 
 
 
@@ -46,7 +47,6 @@ useEffect(()=>{
 
 const check=async()=>{
 const res=await CheckUser();
-console.log(res)
 if(res){
   if(res.data.requireSign===false){
     await dispatch(delete_User());
@@ -149,6 +149,7 @@ const navView=useSelector(state=>state.helper)
       <Route path="/single/:id" element={<SingleProduct/>} />
       <Route path="/dashboard" element={<ProtectedRoute/>} > 
         <Route path='' element={<Dashboard/>} />
+        <Route path="update/:id" element={<UpdateProduct/>}/>
       </Route>
     </Routes>
 <Footer/>

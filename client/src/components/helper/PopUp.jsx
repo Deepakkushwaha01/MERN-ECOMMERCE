@@ -12,7 +12,6 @@ const [back,newback]=useState(false);
 const popval=useSelector(state=>state.helper.pop);
 const popMess=useSelector(state=>state.helper.popMessage);
 
-console.log(popMess)
 
 const dispatch=useDispatch();
 

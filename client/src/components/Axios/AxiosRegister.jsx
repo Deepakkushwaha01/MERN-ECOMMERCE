@@ -12,6 +12,36 @@ export const registerUser=async(data)=>{
 /* ------------------------------------------------------------------------------------------------------------ */
 
 
+/* --------------------------------------------- Update Product ----------------------------------------------- */
+export const getUpdateSingle=async(id)=>{
+    try {
+        const res= await axios.get(`${import.meta.env.VITE_BACKEND_URL}/updateSingleUpdate/${id}`);
+        return res;
+      
+        
+    } catch (error) {
+        if(error){
+            console.log(error)
+        }
+    }
+}
+
+
+export const UpdateProductData=async(data)=>{
+    try {
+        const res=await axios.post(`${import.meta.env.VITE_BACKEND_URL}/updateProduct`,data);
+        return res
+    } catch (error) {
+        
+    }
+}
+
+export const UpdateImage=async(data)=>{
+    const res=await axios.patch(`${import.meta.env.VITE_BACKEND_URL}/p/updateimage`,data);
+       return res;
+   }
+
+/* ------------------------------------------------------------------------------------------------------------ */
 
 
 
