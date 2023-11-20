@@ -12,6 +12,27 @@ export const registerUser=async(data)=>{
 /* ------------------------------------------------------------------------------------------------------------ */
 
 
+
+/* -------------------------------------------- Dashboard --------------------------------------- */
+
+
+export const getuserData=(id)=>{
+    try {
+        console.log(id)
+        const res=axios.get(`${import.meta.env.VITE_BACKEND_URL}/seller?id=${id}`)
+        return res;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
 /* --------------------------------------------- Update Product ----------------------------------------------- */
 export const getUpdateSingle=async(id)=>{
     try {

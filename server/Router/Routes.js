@@ -21,6 +21,7 @@ import { updateItemQuat } from "../Controller/CartController/UpdateItemQuat.js";
 import { GetSingleProduct } from "../Controller/ProductController/Update/GetSingleProduct.js";
 import { UpdateProduct } from "../Controller/ProductController/Update/UpdateProduct.js";
 import { UpdateImages } from "../Controller/ProductController/Update/ImagesUpdateProduct.js";
+import { GetSellerData } from "../Controller/DashBoardController/GetDataSeller.js";
 
 
 
@@ -45,6 +46,13 @@ router.post('/register',register);
 router.post('/login',login);
 /* --------------------------------------------------------------------------------------------- */
 
+
+/* -------------------------------------------- Dashboard --------------------------------------- */
+
+router.get('/seller',GetSellerData);
+
+
+/* ---------------------------------------------------------------------------------------------- */
 
 
 /* ------------------------------------------- Product Update ----------------------------------- */
